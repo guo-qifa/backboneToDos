@@ -11,7 +11,7 @@ gulp.task('serve', function(gulpCallback) {
     // (server is now up)
 
     // set up watch to reload browsers when source changes
-    gulp.watch(['./index.html', './js/*', './assets/*'], browserSync.reload);
+    gulp.watch(['./index.html', './js/**/*.js', './assets/**/*.css'], browserSync.reload);
 
     // notify gulp that this task is done
     gulpCallback();

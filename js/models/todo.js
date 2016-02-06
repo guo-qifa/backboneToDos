@@ -22,4 +22,5 @@ app.Todo = Backbone.Model.extend({
 			completed: !this.get('completed')
 		});
 	}
+
 });
