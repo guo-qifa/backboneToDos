@@ -15,6 +15,14 @@ app.AppView = Backbone.View.extend({
 	statsTemplate: _.template( $('#stats-template').html() ),
 
 
+	// New
+	// Delegated events for creating new items, and clearing completed one.
+	events: {
+		'keypress #new-todo': 'createOnEnter',
+		'click #clear-completed': 'clearCompleted',
+		'click #toggle-all': 'toggleAllComplete'
+	},
+
 	// At initialization we bind to the relevant events on the 'Todos'
 	// collection, when itmes are added or changed
 	initialize: function() {
