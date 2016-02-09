@@ -10,7 +10,7 @@
 <body>
 
   <section class="todoapp" id="todoapp">
-    <header class="header">
+    <header class="header" id="header">
       <h1>todos</h1>
       <input id="new-todo" class="new-todo" placeholder="What needs to be done?" autofocus>
     </header>
@@ -35,24 +35,23 @@
       <input class="toggle" type="checkbox" <%= completed ? 'checked' : '' %>>
       <label><%title %></label>
       <button class="destroy"></button>
-      <input class="edit" value="<%= title %>">
     </div>
+    <input class="edit" value="<%= title %>">
   </script>
 
   <script type="text/template" id="stats-template">
     <span id="todo-count"><strong><%= remaining %></strong> <%= remaining === 1 ? 'item' : 'items' %> left</span>
     <ul id="filters">
-
       <li>
         <a class="selected" href="#/">All</a>
       </li>
 
       <li>
-        <a class="selected" href="#/active">Active</a>
+        <a href="#/active">Active</a>
       </li>
 
       <li>
-        <a class="selected" href="#/completed">Completed</a>
+        <a href="#/completed">Completed</a>
       </li>
 
     </ul>

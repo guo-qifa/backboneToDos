@@ -5,7 +5,7 @@
 
 app.TodoView = Backbone.View.extend({
 
-	// The DOM element for a todo item
+	// The DOM element for a todo item is a list tag
 	tagName: 'li',
 
 	// Cache the template function for a single item
@@ -27,7 +27,7 @@ app.TodoView = Backbone.View.extend({
 
     // Re-renders the titles of the todo item.
 	render: function() {
-		this.$el.html( this.template (this.mode.attributes) );
+		this.$el.html( this.template (this.model.attributes) );
 		this.$input = this.$('.edit');
 		return this;
 	},

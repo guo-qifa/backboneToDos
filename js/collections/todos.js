@@ -38,7 +38,6 @@ var TodoList = Backbone.Collection.extend({
 	comparator: function( todo ) {
 		return todo.get('order');
 	}
-
 });
 
 // Create our gloval collection of **Todos**
