@@ -26,7 +26,7 @@ app.TodoView = Backbone.View.extend({
 	initialize: function() {
 		this.listenTo(this.model, 'change', this.render);
 		this.listenTo(this.model, 'destroy', this.remove);
-		this.listenTo(this.model, 'visible', this.toggleVisibile);
+		this.listenTo(this.model, 'visible', this.toggleVisible);
 	},
 
     // Re-renders the titles of the todo item.
